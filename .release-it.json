@@ -1,0 +1,50 @@
+{
+  "$schema": "https://unpkg.com/release-it@19/schema/release-it.json",
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "requireCleanWorkingDir": true,
+    "tagName": "v${version}",
+    "tag": true,
+    "push": true,
+    "commit": true
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release v${version}",
+    "autoGenerate": false,
+    "web": true,
+    "draft": false,
+    "preRelease": false
+  },
+  "npm": {
+    "publish": false
+  },
+  "hooks": {
+    "after:release": "echo Successfully released ${name} v${version}"
+  },
+  "plugins": {
+    "release-it-pnpm": {},
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {"type": "feat", "section": "Features"},
+          {"type": "fix", "section": "Bug Fixes"},
+          {"type": "perf", "section": "Performance Improvements"},
+          {"type": "revert", "section": "Reverts"},
+          {"type": "docs", "section": "Documentation"},
+          {"type": "refactor", "section": "Code Refactoring"},
+          {"type": "style", "hidden": true},
+          {"type": "test", "section": "Tests"},
+          {"type": "build", "hidden": true},
+          {"type": "ci", "hidden": true},
+          {"type": "chore", "hidden": true}
+        ]
+      },
+      "infile": "CHANGELOG.md",
+      "header": "# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n",
+      "ignoreRecommendedBump": false,
+      "strictSemVer": true
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Eventio",
+  "version": "1.0.0",
+  "description": "Event management platform for creating and organizing events efficiently",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "commit": "cz",
+    "release": "release-it",
+    "release:dry": "release-it --dry-run",
+    "release:patch": "release-it patch",
+    "release:minor": "release-it minor",
+    "release:major": "release-it major"
+  },
+  "keywords": [],
+  "author": "Jakub Maslowski",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "release-it": "^19.0.5",
+    "release-it-pnpm": "^4.6.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
