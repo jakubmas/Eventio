@@ -43,6 +43,15 @@
       },
       "infile": "CHANGELOG.md",
       "header": "# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n",
+      "writerOpts": {
+        "transform": {
+          "hash": "[${hash.substring(0, 7)}](${host}/${owner}/${repository}/commit/${hash})",
+          "issue": "[#${issue}](${host}/${owner}/${repository}/issues/${issue})"
+        },
+        "commitPartial": "* {{#if scope}}**{{scope}}:** {{/if}}{{subject}} ({{hash}})",
+        "headerPartial": "## {{version}} ({{date}})\n\n",
+        "mainTemplate": "{{> header}}{{#each commitGroups}}{{#if title}}\n### {{title}}\n\n{{/if}}{{#each commits}}{{> commit}}{{/each}}{{/each}}\n\n"
+      },
       "ignoreRecommendedBump": false,
       "strictSemVer": true
     }
