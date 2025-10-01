@@ -1,9 +1,13 @@
 {
-  "name": "Eventio",
-  "version": "0.0.0",
+  "name": "eventio",
+  "version": "0.1.0",
+  "private": true,
   "description": "Event management platform for creating and organizing events efficiently",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
     "prepare": "husky",
     "commit": "cz",
     "release": "release-it",
@@ -16,15 +20,27 @@
   "author": "Jakub Maslowski",
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@release-it/conventional-changelog": "^10.0.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
+    "postcss": "^8.5.6",
     "release-it": "^19.0.5",
-    "release-it-pnpm": "^4.6.6"
+    "release-it-pnpm": "^4.6.6",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5"
   },
   "config": {
     "commitizen": {
