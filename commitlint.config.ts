@@ -1,4 +1,6 @@
-module.exports = {
+import type { UserConfig } from '@commitlint/types'
+
+const config: UserConfig = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
@@ -23,4 +25,6 @@ module.exports = {
     'body-leading-blank': [2, 'always'],
     'footer-leading-blank': [2, 'always']
   }
-};
+}
+
+export default config
