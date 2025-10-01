@@ -1,6 +1,6 @@
 {
   "name": "Eventio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Event management platform for creating and organizing events efficiently",
   "main": "index.js",
   "scripts": {
