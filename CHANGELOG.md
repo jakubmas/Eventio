@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 
+## 0.0.2 (2025-10-01)
+
+*  (166c87fe4f594d84e32fd9d34399ff9a71131371)
+
 ## 0.0.1 (2025-10-01)
 
 
