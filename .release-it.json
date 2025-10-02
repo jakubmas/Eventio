@@ -46,11 +46,13 @@
       "writerOpts": {
         "transform": {
           "hash": "[${hash.substring(0, 7)}](${host}/${owner}/${repository}/commit/${hash})",
-          "issue": "[#${issue}](${host}/${owner}/${repository}/issues/${issue})"
+          "issue": "[#${issue}](${host}/${owner}/${repository}/issues/${issue})",
+          "commitTitle": "{{{subject}}}",
+          "commitBody": "{{{body}}}"
         },
-        "commitPartial": "* {{#if scope}}**{{scope}}:** {{/if}}{{subject}} ({{hash}})",
+        "commitPartial": "* {{#if scope}}**{{scope}}:** {{/if}}{{{subject}}}{{#if body}}\n  {{{body}}}{{/if}} ({{hash}})",
         "headerPartial": "## {{version}} ({{date}})\n\n",
-        "mainTemplate": "{{> header}}{{#each commitGroups}}{{#if title}}\n### {{title}}\n\n{{/if}}{{#each commits}}{{> commit}}{{/each}}{{/each}}\n\n"
+        "mainTemplate": "{{> header}}{{#each commitGroups}}{{#if title}}\n### {{title}}\n\n{{/if}}{{#each commits}}{{> commit}}\n{{/each}}{{/each}}\n"
       },
       "ignoreRecommendedBump": false,
       "strictSemVer": true
