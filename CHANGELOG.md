@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 
+## 0.5.0 (2025-10-02)
+
+
+### feat
+
+* add a11y linting and bundle analyzer (#5) (c0032b3de0e70f3acac5a44b6b0b7b8f24d00fc6)
+
 ## 0.4.0 (2025-10-02)
 
 
