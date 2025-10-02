@@ -6,8 +6,9 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
 import nextPlugin from '@next/eslint-plugin-next';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-export default tseslint.config(
+export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -18,6 +19,7 @@ export default tseslint.config(
       prettier: prettierPlugin,
       '@next/next': nextPlugin,
       'simple-import-sort': simpleImportSort,
+      'jsx-a11y': jsxA11yPlugin,
     },
     languageOptions: {
       parserOptions: {
@@ -38,6 +40,7 @@ export default tseslint.config(
       ...reactHooksPlugin.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
+      ...jsxA11yPlugin.configs.recommended.rules,
       ...prettierConfig.rules,
       'prettier/prettier': 'error',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
@@ -61,4 +64,4 @@ export default tseslint.config(
   {
     ignores: ['.next/', 'node_modules/', 'out/', 'public/', '.husky/', 'next-env.d.ts', 'commitlint.config.ts', 'CHANGELOG.md', '.lintstagedrc.js'],
   }
-);
+];
