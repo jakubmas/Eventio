@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 
+## 0.4.0 (2025-10-02)
+
+
+### FEAT
+
+* Add GitHub workflows for CI lint and test automation (#4)
+  feat: add vitest testing infrastructure with react testing library
+
+- Install vitest, jsdom, @vitejs/plugin-react, vite-tsconfig-paths
+- Add @testing-library/react, jest-dom, user-event for enhanced testing DX
+- Create minimal vitest.config.mts
+
+ci(test.yml): add github workflow for ci test automation (16baf8ed20fba74dfeafbdeb6553ea55fba96b6b)
+
 ## 0.3.0 (2025-10-02)
 
 
